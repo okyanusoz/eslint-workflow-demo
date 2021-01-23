@@ -13,7 +13,7 @@ jobs:
       - name: Lint
         run: npx eslint . | tee -a report.txt
         shell: bash
-      - name: Create text to markdown
+      - name: Convert text to markdown
         run: node ci/create-md-message.js
       - name: Comment on PR
         uses: harupy/comment-on-pr@master
