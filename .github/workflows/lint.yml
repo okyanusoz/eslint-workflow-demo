@@ -10,6 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       # you can run setup-node here, just make sure it's able to run the Node.js script
+      - run: npm install
       - name: Lint
         run: npx eslint . | tee -a report.txt || true
         shell: bash
